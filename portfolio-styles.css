@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    color: #1B4965;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+}
+
+.body {
+    background-color: #faebd7;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+    font-weight: 600;
+    margin-left: 90px;
+    padding: 10px 0;
+}
+
+.nav a i {
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.nav a i:hover {
+    color: #aa2222;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.content {
+    animation: transitionIn 0.75s;
+    margin: 20px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    cursor: pointer;
+    background-color: #aa2222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: ease 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(170, 34, 34, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: ease 0.5s;
+    filter: grayscale(0.5);
+}
+
+.card img:hover {
+    filter: grayscale(0);
+}
+
+.card h3 {
+    color: white;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.card p {
+    color: white;
+    font-size: 16px;
+    padding: 0 15px 15px 15px;
+}
+
+.footer {
+    background-color: #1B4965;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p {
+    color: #fff;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        margin-left: 25px;
+    }
+    .content {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 25px;
+    }
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .card img {
+        height: 200px;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card p {
+        font-size: 14px;
+    }
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
